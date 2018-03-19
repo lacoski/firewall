@@ -60,6 +60,7 @@ __Các targets được sử dụng:__
 > Các tham số sau sẽ cho phép iptables thực hiện các hành động sau cho phù hợp với biều đồ xử lý gói tin do người sử dụng định sẳn.
 
 Các lệnh switching quan trọng:
+
 ![](../images/iptables-overview-3.jpg)
 
 ví dụ:
@@ -83,10 +84,10 @@ iptables -A FORWARD -s 0/0 -i eth0 -d 10.0.0.1 -o eth1 -p TCP --sport 999:65535 
 
 Một số điều kiện mở rộng thông dụng:
 
-•	`-m multiport –sport <port,port>` : Liệt kê nhiều port nguồn khác nhau của TCP/UDP được phân cách bởi dấu phẩy. Lưu ý đây là liệt kê port chứ không phải chuỗi các port
-•	`-m multiport –dport <port,port>` : Liệt kê nhiều port đích khác nhau của TCP/UDP được phân cách bởi dấu phẩy. Lưu ý đây là liệt kê port chứ không phải chuỗi các port
-•	`-m multiport –ports <port,port>` : Liệt kê nhiều port khác nhau của TCP/UDP được phân cách bởi dấu phẩy. Lưu ý đây là liệt kê port chứ không phải chuỗi các port. Không phân biệt port nguồn hay đích.
-•	`-m state <state>`
+-	`-m multiport –sport <port,port>` : Liệt kê nhiều port nguồn khác nhau của TCP/UDP được phân cách bởi dấu phẩy. Lưu ý đây là liệt kê port chứ không phải chuỗi các port
+-	`-m multiport –dport <port,port>` : Liệt kê nhiều port đích khác nhau của TCP/UDP được phân cách bởi dấu phẩy. Lưu ý đây là liệt kê port chứ không phải chuỗi các port
+-	`-m multiport –ports <port,port>` : Liệt kê nhiều port khác nhau của TCP/UDP được phân cách bởi dấu phẩy. Lưu ý đây là liệt kê port chứ không phải chuỗi các port. Không phân biệt port nguồn hay đích.
+-	`-m state <state>`
 
 Các trạng thái thông dụng nhất được dùng là:
 - __ESTABLISHED__: Gói dữ liệu là một phần kết nối đã được 2 bên thiết lập.

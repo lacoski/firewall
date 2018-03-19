@@ -1,13 +1,13 @@
 # Bắt đầu với Iptables
 ---
 ```
-TARGET    PROT   OPT  IN     OUT    SOURCE   DESTINATION
-ACCEPT    all    	    --       lo      any       anywhere   anywhere
-ACCEPT    all          --       any    any      anywhere   anywhere   	ctstate  RELATED,ESTABLISHED
-ACCEPT    tcp         --       any    any      anywhere   anywhere    	tcp      dpt:ssh
-ACCEPT    tcp         --       any    any      anywhere   anywhere    	tcp      dpt:http
-ACCEPT    tcp         --       any    any      anywhere   anywhere    	tcp      dpt:https
-DROP         all          --       any    any      anywhere   anywhere
+TARGET    PROT  OPT   IN     OUT    SOURCE    DESTINATION
+ACCEPT    all   --    lo     any    anywhere  anywhere
+ACCEPT    all   --    any    any    anywhere  anywhere   	  ctstate  RELATED,ESTABLISHED
+ACCEPT    tcp   --    any    any    anywhere  anywhere    	tcp      dpt:ssh
+ACCEPT    tcp   --    any    any    anywhere  anywhere    	tcp      dpt:http
+ACCEPT    tcp   --    any    any    anywhere  anywhere    	tcp      dpt:https
+DROP      all   --    any    any    anywhere  anywhere
 ```
 Đoạn thứ nhất, có các cột như TARGET, PROT, OPT, IN, OUT, SOURCE, DESTINATION, ý nghĩa của mỗi cột là như sau:
 + TARGET: Hành động sẽ thực thi cho mỗi chuỗi quy tắc.

@@ -28,7 +28,7 @@ Iptables là một trong những firewall tuyệt vời để gia cố các tầ
 
 `NAT queue`: thực thi chức năng NAT (Network Address Translation), cung cấp hai loại built-in chain sau đây:
 - `Pre-routing chain`: NAT từ ngoài vào trong nội bộ. Quá trính NAT sẽ thực hiện trước khi thực thi cơ chế routing. Điều này thuận lợi cho việc đổi địa chỉ đích để địa chỉ trương thích với bảng định tuyến của firewall, khi ta cấu hình ta có thể dùng khóa DNAT để mô tả kỹ thuật này
-- P`ost-routing chain`: NAT từ trong ra ngoài. Quá trình NAT sẽ thực hiện sau khi thực hiện cơ chế định tuyến. Nhằm thay đổi địa chỉ nguồn của gói tin. Kỹ thuật này được gọi là NAT 1-1 hoặc many-to-one, Source NAT hay SNAT
+- `Post-routing chain`: NAT từ trong ra ngoài. Quá trình NAT sẽ thực hiện sau khi thực hiện cơ chế định tuyến. Nhằm thay đổi địa chỉ nguồn của gói tin. Kỹ thuật này được gọi là NAT 1-1 hoặc many-to-one, Source NAT hay SNAT
 - `OUTPUT`: Trong loại này firewall sẽ thực hiện quá trình NAT.
 
 Để có cái nhìn tổng quan về việc lọc và xử lý gói tin trong iptables, chúng ta có thể tham khảo hình sau:

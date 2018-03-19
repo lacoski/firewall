@@ -8,7 +8,7 @@
 ```
 iptables -> Tables -> Chains -> Rules
 ```
-pic 1
+![](../images/iptable-kientruc-1.png)
 
 > Có thể tóm tắt, tables là 1 chuỗi các chains, chains là 1 chuỗi các firewall rules.
 
@@ -42,7 +42,7 @@ Iptables’s Raw table sử dụng cho việc loại trừ các cấu hình. Raw
 + PREROUTING chain
 + OUTPUT chain
 
-pic 2
+![](../images/iptable-kientruc-2.png)
 
 Xem các bảng:
 ```
